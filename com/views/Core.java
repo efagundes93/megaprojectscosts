@@ -1,5 +1,9 @@
 package views;
 
+import builders.ProjetoBuilder;
+import dao.ProjetoDAO;
+import models.Projeto;
+
 /**
  * 
  * @author Fagundes, Emiliano
@@ -9,7 +13,8 @@ package views;
 public class Core {
 
 	public static void main(String[] args) {
-		//TODO
-	}
+        ProjetoBuilder builder = new ProjetoBuilder();
+        builder.getInstance();
 
+	}
 }

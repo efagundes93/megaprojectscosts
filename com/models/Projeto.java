@@ -11,36 +11,44 @@ import java.util.ArrayList;
  */
 
 public class Projeto {
+
 	public class Tarefa {
+
 		String nome;
 		int custo;
 		List<Relacao> adj;
 
 		Tarefa(String nome, int custo) {
+
 			this.nome = nome;
 			this.adj = new ArrayList<Relacao>();
 			this.custo = custo;
 		}
 
-		void addAdj(Relacao e) {
+		public void addRelacao(Relacao e) {
+
 			adj.add(e);
 		}
 	}
 
-	public class Relacao {
+	private class Relacao {
+
 		Tarefa origem;
 		Tarefa destino;
 
 		Relacao(Tarefa origem, Tarefa destino) {
+
 			this.origem = origem;
 			this.destino = destino;
 		}
 	}
+	
 	private 	String nomeProjeto;
 	private 	List<Tarefa> tarefas;
 	private List<Relacao> relacoes;
 
 	public Projeto() {
+
 		tarefas = new ArrayList<Tarefa>();
 		relacoes = new ArrayList<Relacao>();
 	}
@@ -51,10 +59,12 @@ public class Projeto {
 	}
 		
 	public void setNomeProjeto(String nomeProjeto) {
+
 		this.nomeProjeto= nomeProjeto;;
 	}
 	public String getNomeProjeto() {
-		return this.nomeProjeto;;
+
+		return this.nomeProjeto;
 	}
 	
 	public List<Tarefa> getTarefas() {
@@ -70,6 +80,7 @@ public class Projeto {
 		this.relacoes = relacoes;
 	}
 	public String toString() {
+
 		String r = "";
 		for (Tarefa u : tarefas) {
 			r += u.nome + " -> ";
